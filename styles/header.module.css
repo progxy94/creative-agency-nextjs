@@ -1,0 +1,220 @@
+.header {
+  background: #ffffff;
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.logo {
+  flex-shrink: 0;
+  width: auto;
+  max-width: 150px;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.desktopNav {
+  flex: 1;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .desktopNav {
+    display: block;
+  }
+}
+
+.desktopNav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.desktopNav .ekit-menu-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #333333;
+  position: relative;
+  cursor: pointer;
+}
+
+.desktopNav .ekit-menu-nav-link:hover {
+  color: #1a1a1a;
+}
+
+.desktopNav .ekit-menu-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1a1a1a;
+  transition: width 0.3s ease;
+}
+
+.desktopNav .ekit-menu-nav-link:hover::after,
+.desktopNav .ekit-menu-nav-link.active::after {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .submenu {
+  display: flex;
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  padding: 16px 0;
+  min-width: 200px;
+  margin-top: 8px;
+  list-style: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+}
+
+.submenu li {
+  margin: 0;
+  padding: 0;
+}
+
+.submenu a {
+  display: block;
+  padding: 12px 20px;
+  color: #333333;
+  font-size: 13px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.submenu a:hover {
+  background-color: #f9f9f9;
+  color: #1a1a1a;
+  padding-left: 24px;
+}
+
+.phoneContact {
+  display: none;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .phoneContact {
+    display: flex;
+  }
+}
+
+.phoneContact svg {
+  width: 24px;
+  height: 24px;
+  fill: #1a1a1a;
+}
+
+.phoneContact h5 {
+  font-size: 12px;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.phoneContact p {
+  font-size: 13px;
+  margin: 0;
+  color: #666666;
+}
+
+.mobileMenuToggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin: 0 -8px;
+}
+
+@media (min-width: 1024px) {
+  .mobileMenuToggle {
+    display: none;
+  }
+}
+
+.mobileMenuToggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #1a1a1a;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobileNav {
+  display: block;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eeeeee;
+}
+
+@media (min-width: 1024px) {
+  .mobileNav {
+    display: none;
+  }
+}
+
+.mobileNav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobileNav li {
+  margin: 0;
+  padding: 0;
+}
+
+.mobileNav a {
+  display: block;
+  padding: 12px 0;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid #f0f0f0;
+  transition: color 0.3s ease;
+}
+
+.mobileNav a:hover {
+  color: #1a1a1a;
+}

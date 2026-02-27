@@ -1,0 +1,289 @@
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  min-height: 600px;
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    min-height: auto;
+  }
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mainTitle {
+  font-size: 56px;
+  font-family: 'Anton', sans-serif;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -2px;
+  line-height: 1.2;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 36px;
+  }
+}
+
+.heroStats {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  animation: fadeInUp 0.8s ease-out;
+  animation-delay: 200ms;
+}
+
+.statItem h5 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+}
+
+.counterNumber {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a1a1a;
+  min-width: 80px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #eeeeee;
+  margin: 10px 0;
+}
+
+.dividerHorizontal {
+  width: 60px;
+  height: 2px;
+  background-color: #1a1a1a;
+  margin: 0 0 20px 0;
+}
+
+.heroImages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainImage {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  animation: slideInRight 0.8s ease-out;
+}
+
+.teamSection {
+  margin-top: 80px;
+  padding-top: 60px;
+}
+
+.teamHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.teamHeader h6 {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+@media (max-width: 1024px) {
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.teamImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.ctaSection {
+  margin-top: 80px;
+  padding-top: 60px;
+  border-top: 1px solid #eeeeee;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  animation: fadeInUp 0.8s ease-out;
+  animation-delay: 1200ms;
+}
+
+@media (max-width: 768px) {
+  .ctaSection {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
+
+.ctaSection p {
+  flex: 1;
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.ctaSection button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaSection button:hover {
+  background-color: #333333;
+  transform: translateX(4px);
+}
+
+.ctaSection button svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.videoButton {
+  flex-shrink: 0;
+}
+
+.videoButton a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.videoButton a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.videoButton a:hover::before {
+  left: 0;
+}
+
+.videoButton a svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
